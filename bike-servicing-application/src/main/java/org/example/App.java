@@ -56,34 +56,158 @@ public class App
 
             switch(choice)
             {
-                case 1:
-                    System.out.println("Performing create operation on Customer & Bike");
-                    //StudentService.insertStudent();
-                    break;
-
-                case 2:
-                    System.out.println("performing READ operation on Student");
-                    //add your read logic here
-                    break;
-
-                case 3:
-                    System.out.println("Performing UPDATE operation on Student");
-                    //add your logic here
-                    break;
-
-                case 4:
-                    System.out.println("Performing DELETE operation on Student");
-                    //add your logic here
-                    break;
-
-                case 5:
-                    System.out.println("Perform Retrieve operation Address");
-                    //write your logic here
-                    break;
-
                 case 0:
                     System.out.println("Thanks for use :Exiting program");
                     break;
+
+                case 1:
+                    System.out.println("Performing Adding customer");
+                    customerService.insertCustomer();
+                    break;
+
+                case 2:
+                    System.out.println("performing READ operation on Customer");
+                    customerService.retrieveCustomer();
+                    break;
+
+                case 3:
+                    System.out.println("Performing UPDATE operation on Customer");
+                    customerService.updateCustomerDetails();
+                    break;
+
+                case 4:
+                    System.out.println("Performing DELETE operation on Customer");
+                    customerService.deleteCustomerDetails();
+                    break;
+
+                case 5:
+                    System.out.println("Performing Retrieve All Customer");
+                    customerService.viewAllCustomerDetails();
+                    break;
+
+                case 6:
+                    System.out.println("Performing adding new bike");
+                    bikeService.addNewBike();
+                    break;
+
+                case 7:
+                    System.out.println("performing READ operation on Bike");
+                    bikeService.retrieveBike();
+                    break;
+
+                case 8:
+                    System.out.println("Performing UPDATE operation on Bike");
+                    bikeService.updateBikeDetails();
+                    break;
+
+                case 9:
+                    System.out.println("Performing DELETE operation on Bike");
+                    bikeService.deleteBikeDetails();
+                    break;
+
+                case 10:
+                    System.out.println("Performing Retrieve All Bike");
+                    bikeService.viewAllBikeDetails();
+                    break;
+
+                case 11:
+                    System.out.println("Performing adding part");
+                    partInventoryService.addPart();
+                    break;
+
+                case 12:
+                    System.out.println("performing READ operation on Part");
+                    partInventoryService.viewPart();
+                    break;
+
+                case 13:
+                    System.out.println("Performing UPDATE operation on Part");
+                    partInventoryService.updatePartDetails();
+                    break;
+
+                case 14:
+                    System.out.println("Performing DELETE operation on Bike");
+                    partInventoryService.deletePartDetails();
+                    break;
+
+                case 15:
+                    System.out.println("Performing Retrieve All Part");
+                    partInventoryService.viewAllPartDetails();
+                    break;
+
+                case 16:
+                    System.out.println("performing READ operation on Assignment");
+                    assignmentService.viewAssignment();
+                    break;
+
+                case 17:
+                    System.out.println("Performing UPDATE operation on Assignment");
+                    assignmentService.updateAssignmentDetails();
+                    break;
+
+                case 18:
+                    System.out.println("Performing DELETE operation on Assignment");
+                    assignmentService.deleteAssignmentDetails();
+                    break;
+
+                case 19:
+                    System.out.println("Performing Retrieve All Assignment");
+                    assignmentService.viewAllAssignmentDetails();
+                    break;
+
+                case 20:
+                    System.out.println("performing READ operation on Request");
+                    requestService.viewRequest();
+                    break;
+
+                case 21:
+                    System.out.println("Performing update operation on request");
+                    requestService.updateRequestDetails();
+                    break;
+
+                case 22:
+                    System.out.println("Perform delete operation on Request");
+                    requestService.deleteRequestDetails();
+                    break;
+
+                case 23:
+                    System.out.println("Performing retrieve all request");
+                    requestService.viewAllRequestDetails();
+                    break;
+
+                case 24:
+                    System.out.println("Performing add Technician operation");
+                    techniciansService.addTechnician();
+                    break;
+
+                case 25:
+                    System.out.println("performing READ operation on Technician");
+                    techniciansService.reterieveTechnicianDetails();
+                    break;
+
+                case 26:
+                    System.out.println("Performing UPDATE operation on Technician");
+                    techniciansService.updateTechnicanDetails();
+                    break;
+
+                case 27:
+                    System.out.println("Performing DELETE operation on Technician");
+                    techniciansService.deleteTechnicanDetails();
+                    break;
+
+                case 28:
+                    System.out.println("Perform Retrieve all Technician ");
+                    techniciansService.viewAllTechnicanDetails();
+                    break;
+
+                case 29:
+                    System.out.println("Performing View history");
+                    historyService.viewHistory();
+                    break;
+
+                case 30:
+                    System.out.println("Performing retrieve all history");
+                    historyService.viewAllHistory();
 
                 default:
                     System.out.println("Invalid choice plz select Correct Option");
