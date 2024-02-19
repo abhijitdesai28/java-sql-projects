@@ -1,6 +1,8 @@
 package org.example;
 
 import service.*;
+
+import java.sql.SQLException;
 import java.util.Scanner;
 
 /**
@@ -11,8 +13,7 @@ public class App
 {
     private static final ConnectionService connectionService=new ConnectionService();
 
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) throws SQLException {
         //create object of all service classes
         AssignmentService assignmentService = new AssignmentService();
         BikeService bikeService = new BikeService();
@@ -207,6 +208,7 @@ public class App
 
                 case 30:
                     System.out.println("Performing retrieve all history");
+
                     historyService.viewAllHistory();
 
                 default:

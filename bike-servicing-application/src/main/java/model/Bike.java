@@ -2,7 +2,8 @@ package model;
 
 public class Bike {
     private int bikeId;
-    private Customer customer;
+   // private Customer customer;
+    private int customerId;
     private String make;
     private String model;
     private int year;
@@ -19,13 +20,13 @@ public class Bike {
         this.bikeId = bikeId;
     }
 
-    public Customer getCustomer() {
-        return customer;
-    }
+//   // public Customer getCustomer() {
+//        return customer;
+//    }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
+//    public void setCustomer(int customer) {
+//        this.customer = customer;
+//    }
 
     public String getMake() {
         return make;
@@ -63,6 +64,10 @@ public class Bike {
         return licensePlate;
     }
 
+    public int getCustomerId(){return customerId;}
+
+    public int setCustomerId(int customerId){return this.customerId=customerId;}
+
     public void setLicensePlate(String licensePlate) {
         this.licensePlate = licensePlate;
     }
@@ -73,9 +78,10 @@ public class Bike {
     }
 
     //declare parametrized constructor
-    public Bike(int bikeId, Customer customer, String make, String model, int year, String color,String licensePlate) {
+    public Bike(int bikeId,int customerId,String make, String model, int year, String color,String licensePlate) {
         this.bikeId = bikeId;
-        this.customer = customer;
+       // this.customer = customer;
+        this.customerId=customerId;
         this.make = make;
         this.model = model;
         this.year = year;
@@ -87,7 +93,7 @@ public class Bike {
     public String toString() {
         return "Bike{" +
                 "bikeId=" + bikeId +
-                ", customer=" + customer +
+                ", customerId='"+customerId +'\'' +
                 ", make='" + make + '\'' +
                 ", model='" + model + '\'' +
                 ", year=" + year +

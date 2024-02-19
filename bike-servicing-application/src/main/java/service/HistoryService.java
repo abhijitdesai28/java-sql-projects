@@ -1,6 +1,7 @@
 package service;
 
 public class HistoryService {
+
     public void viewHistory() {
     }
 
