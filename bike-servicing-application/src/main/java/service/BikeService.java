@@ -4,6 +4,7 @@ import model.Bike;
 import model.Customer;
 import repository.BikeRepository;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class BikeService {
@@ -27,6 +28,7 @@ public class BikeService {
         String licensePlate=scanner.next();
 
         bike.setBikeId(bikeId);
+        bike.setCustomerId(customerId);
         bike.setMake(make);
         bike.setModel(model);
         bike.setYear(year);
@@ -40,15 +42,40 @@ public class BikeService {
         }
     }
 
-    public void retrieveBike() {
+    public void retrieveBike() throws SQLException {
+        System.out.println("enter bike id :");
+        int bikeId=scanner.nextInt();
+        bikeRepository.retrieveBike(bikeId);
     }
 
-    public void updateBikeDetails() {
+    public void updateBikeDetails() throws SQLException {
+        System.out.println("enter bike id whose data need to update");
+        int bikeId = scanner.nextInt();
+        System.out.println("enter year :");
+        int year = scanner.nextInt();
+        System.out.println("enter new color :");
+        String color = scanner.next();
+        System.out.println("enter new licensePlate:");
+        String licensePlate = scanner.next();
+
+        bike.setCustomerId(bikeId);
+        bike.setYear(year);
+        bike.setColor(color);
+        bike.setLicensePlate(licensePlate);
+        bikeRepository.updateBikeDetails(bike);
     }
 
-    public void deleteBikeDetails() {
+    public void deleteBikeDetails() throws SQLException {
+        System.out.println("enter bikeId whose data need to delete");
+        int bikeId = scanner.nextInt();
+
+        bike.setBikeId(bikeId);
+
+        bikeRepository.deleteBikeDetails(bike);
     }
 
-    public void viewAllBikeDetails() {
+    public void viewAllBikeDetails() throws SQLException {
+        System.out.println("now fetching all details of bike :");
+        bikeRepository.viewAllBikeDetails();
     }
 }

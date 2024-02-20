@@ -69,7 +69,6 @@ public class CustomerService {
         customerRepository.deleteCustomerDetails(customer);
 
     }
-
     public void viewAllCustomerDetails() throws SQLException {
         System.out.println("now fetching all details of customer :");
         customerRepository.viewAllCustomer();

@@ -80,7 +80,7 @@ public class Bike {
     //declare parametrized constructor
     public Bike(int bikeId,int customerId,String make, String model, int year, String color,String licensePlate) {
         this.bikeId = bikeId;
-       // this.customer = customer;
+      //  this.customer = customer;
         this.customerId=customerId;
         this.make = make;
         this.model = model;
