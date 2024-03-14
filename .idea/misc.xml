@@ -6,7 +6,14 @@
       <list>
         <option value="$PROJECT_DIR$/student-management-application/pom.xml" />
         <option value="$PROJECT_DIR$/bike-servicing-application/pom.xml" />
+        <option value="$PROJECT_DIR$/hotel-reservation-system/pom.xml" />
+        <option value="$PROJECT_DIR$/h-r-s/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/h-r-s/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager">

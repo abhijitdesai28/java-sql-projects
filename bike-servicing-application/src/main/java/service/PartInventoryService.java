@@ -14,14 +14,14 @@ public class PartInventoryService {
         System.out.println("pls enter Part id:");
         int partId=scanner.nextInt();
         System.out.println("pls enter Part name:");
-        String PartName =scanner.next();
+        String partName =scanner.next();
         System.out.println("pls enter quantity:");
         int quantityAvailable=scanner.nextInt();
         System.out.println("pls enter Price:");
         int price=scanner.nextInt();
 
         partInventory.setPartId(partId);
-        partInventory.setPartName(PartName);
+        partInventory.setPartName(partName);
         partInventory.setQuantityAvailable(quantityAvailable);
         partInventory.setPrice(price);
 

@@ -19,8 +19,8 @@ public class ServiceRequestRepository {
         {
             System.out.println("requestId :"+resultSet.getInt(1));
             System.out.println("bikeId :"+resultSet.getInt(2));
-            System.out.println("status :"+resultSet.getString(4));
-            System.out.println("description:"+resultSet.getString(5));
+            System.out.println("status :"+resultSet.getString(3));
+            System.out.println("description:"+resultSet.getString(4));
         }
     }
 
@@ -45,8 +45,8 @@ public class ServiceRequestRepository {
         {
             System.out.println("requestId :"+resultSet.getInt(1));
             System.out.println("bikeId :"+resultSet.getInt(2));
-            System.out.println("status :"+resultSet.getString(4));
-            System.out.println("description:"+resultSet.getString(5));
+            System.out.println("status :"+resultSet.getString(3));
+            System.out.println("description:"+resultSet.getString(4));
         }
     }
 }

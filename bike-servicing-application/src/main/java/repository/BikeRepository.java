@@ -42,10 +42,11 @@ public class BikeRepository {
             System.out.println("bikeId :"+resultSet.getInt(1));
             System.out.println("customerId :"+resultSet.getInt(2));
             System.out.println("make :"+resultSet.getString(3));
-            System.out.println("model :"+resultSet.getString(3));
-            System.out.println("year :"+resultSet.getInt(4));
-            System.out.println("color:"+resultSet.getString(5));
-            System.out.println("licensePlate :"+resultSet.getString(6));
+            System.out.println("model :"+resultSet.getString(4));
+          //  System.out.println("year :"+resultSet.getInt(4));
+            System.out.println("year :"+resultSet.getString(5));
+            System.out.println("color:"+resultSet.getString(6));
+            System.out.println("licensePlate :"+resultSet.getString(7));
         }
 
     }
@@ -61,8 +62,8 @@ public class BikeRepository {
     }
 
     public void deleteBikeDetails(Bike bike) throws SQLException {
-        PreparedStatement statement = connection.prepareStatement("delete from customer where customerId=?");
-        statement.setInt(1,bike.getCustomerId());
+        PreparedStatement statement = connection.prepareStatement("delete from bike where bikeId=?");
+        statement.setInt(1,bike.getBikeId());
         statement.executeUpdate();
     }
 
@@ -72,12 +73,12 @@ public class BikeRepository {
         while(resultSet.next())
         {
             System.out.println("bikeId :"+resultSet.getInt(1));
-            System.out.println("customerId :"+resultSet.getInt(1));
-            System.out.println("make :"+resultSet.getString(2));
-            System.out.println("model :"+resultSet.getString(3));
-            System.out.println("year :"+resultSet.getInt(4));
-            System.out.println("color:"+resultSet.getString(5));
-            System.out.println("licensePlate :"+resultSet.getString(6));
+            System.out.println("customerId :"+resultSet.getInt(2));
+            System.out.println("make :"+resultSet.getString(3));
+            System.out.println("model :"+resultSet.getString(4));
+            System.out.println("year :"+resultSet.getInt(5));
+            System.out.println("color:"+resultSet.getString(6));
+            System.out.println("licensePlate :"+resultSet.getString(7));
         }
     }
 }

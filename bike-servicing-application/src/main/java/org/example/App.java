@@ -40,16 +40,15 @@ public class App
             System.out.println("Parts Related:>>>>>>>>>>"+"\n"+"     11: Add part into Inventory"+"\n"+"     12: view required part"+"\n"+"     13: Update part Details"+
                     "\n"+"     14: Delete part Details"+"\n"+"     15: View all part details");
 
-            System.out.println("Assignment Date Related:>>>>>>>>>>"+"\n"+"     16: View Assignment"+"\n"+"     17: Retrieve Specific Assignment Details"+"\n"+"     18: Update Assignment Details"+
-                    "\n"+"     19: Delete Assignment Details"+"\n"+"     20: View all Assignment details");
+            System.out.println("Assignment Date Related:>>>>>>>>>>"+"\n"+"     16: View Assignment"+"\n"+"     17: Update Assignment Details"+ "\n"+"     18: Delete Assignment Details"+"\n"+"     19: View all Assignment details");
 
-            System.out.println("Service Request Data Related:>>>>>>>>>>"+"\n"+"     21: view request details with id"+"\n"+"     22: Retrieve specific request Details"+"\n"+"     23: Update request Details"+
-                    "\n"+"     24: Delete request Details"+"\n"+"     25: View all request details");
+            System.out.println("Service Request Data Related:>>>>>>>>>>"+"\n"+"     20: view request details with id"+"\n"+"     21: Update request Details"+ "\n"+"     22: Delete request Details"+"\n"+"     23: View all request details");
 
-            System.out.println("Service Technician data Related:>>>>>>>>>>"+"\n"+"     26: Register New Technician"+"\n"+"     27: Retrieve Specific technician Details"+"\n"+"     28: Update Existing technician Details"+
-                    "\n"+"     29: Delete Technician Details"+"\n"+"     30: View all Technician details");
+            System.out.println("Service Technician data Related:>>>>>>>>>>"+"\n"+"     24: Register New Technician"+"\n"+"     25: Retrieve Specific technician Details"+"\n"+"     26: Update Existing technician Details"+
+                    "\n"+"     27: Delete Technician Details"+ "\n"+"     28: View all Technician details");
 
-            System.out.println("Service History Related:>>>>>>>>>>"+"\n"+"     31: View history of service"+"\n"+"     32: View total history");
+            System.out.println("Service History Related:>>>>>>>>>>"+"\n"+"     29: View history of service"+"\n"+"     30: View total history");
+            System.out.println("Do u want to Exit Enter zero(0):");
 
 
             System.out.println("Enter your Choice: ");
@@ -208,12 +207,12 @@ public class App
 
                 case 30:
                     System.out.println("Performing retrieve all history");
-
                     historyService.viewAllHistory();
+                    break;
 
                 default:
                     System.out.println("Invalid choice plz select Correct Option");
-
+                    break;
             }
 
         }while (choice!=0);

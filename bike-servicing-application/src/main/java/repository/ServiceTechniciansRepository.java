@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class ServiceTechniciansRepository {
     Connection connection=new ConnectionService().getConnection();
     public boolean addTechnician(ServiceTechnicians serviceTechnicians) {
-        String query ="INSERT INTO customer Values(?,?,?,?)";
+        String query ="INSERT INTO servicetechnician Values(?,?,?,?)";
         try(PreparedStatement preparedStatement=connection.prepareStatement(query)){
             preparedStatement.setInt(1,serviceTechnicians.getTechnicianId());
             preparedStatement.setString(2,serviceTechnicians.getFirstName());
@@ -30,7 +30,7 @@ public class ServiceTechniciansRepository {
     }
 
     public void reterieveTechnicianDetails(int technicianId) throws SQLException{
-        PreparedStatement statement = connection.prepareStatement("select * from technician where technicianId= ?");
+        PreparedStatement statement = connection.prepareStatement("select * from servicetechnician where technicianId= ?");
         statement.setInt(1,technicianId);
         ResultSet resultSet = statement.executeQuery();
         while(resultSet.next())
@@ -44,7 +44,7 @@ public class ServiceTechniciansRepository {
     }
 
     public void updateTechnicanDetails(ServiceTechnicians serviceTechnicians) throws SQLException{
-        PreparedStatement statement = connection.prepareStatement("update technician set lastName =? ,specialization=? where technicianId=?");
+        PreparedStatement statement = connection.prepareStatement("update servicetechnician set lastName =? ,specialization=? where technicianId=?");
         statement.setString(1,serviceTechnicians.getLastName());
         statement.setString(2,serviceTechnicians.getSpecialization());
         statement.setInt(3,serviceTechnicians.getTechnicianId());
@@ -52,13 +52,13 @@ public class ServiceTechniciansRepository {
     }
 
     public void deleteTechnicanDetails(ServiceTechnicians serviceTechnicians) throws SQLException{
-        PreparedStatement statement = connection.prepareStatement("delete from technician where technicianId=?");
+        PreparedStatement statement = connection.prepareStatement("delete from servicetechnician where technicianId=?");
         statement.setInt(1,serviceTechnicians.getTechnicianId());
         statement.executeUpdate();
     }
 
     public void viewAllTechnicanDetails() throws SQLException{
-        PreparedStatement statement = connection.prepareStatement("select * from technician");
+        PreparedStatement statement = connection.prepareStatement("select * from servicetechnician");
         ResultSet resultSet = statement.executeQuery();
         while(resultSet.next())
         {

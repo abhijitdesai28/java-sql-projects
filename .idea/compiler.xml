@@ -6,9 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="hotel-reservation-system" />
         <module name="student-management-application" />
         <module name="bike-servicing-application" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="h-r-s" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
